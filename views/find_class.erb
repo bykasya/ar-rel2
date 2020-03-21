@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h4><a href="/">Back to Students</a></h4>
+    <h3>Please choose a class</h3>
+    <form action="/this_class" method="post">
+      <select name="name">
+        <% @classes.each do |c| %>
+          <option value=<%= c.name %>><%= c.name %></option>
+        <% end %>
+      </select>
+      <input type="submit" value="Find">
+    </form>
+  </body>
+</html>
